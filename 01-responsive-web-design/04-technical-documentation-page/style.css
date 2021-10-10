@@ -1,0 +1,311 @@
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+
+:root {
+    /*----------------------
+            COLORS
+    -----------------------*/
+
+    /* main colors */
+    --color-primary: #34495e;
+    --color-primary-light: color-mod(var(--color-primary) tint(15%));
+    --color-primary-dark: color-mod(var(--color-primary) shade(15%));
+    --color-primary-bg: color-mod(var(--color-primary) alpha(20%));
+
+    --color-accent: #f1f1f2;
+    --color-accent-light: color-mod(var(--color-accent) tint(15%));
+    --color-accent-dark: color-mod(var(--color-accent) shade(10%));
+    --color-accent-bg: color-mod(var(--color-accent) alpha(20%));
+
+    --black: #1d1d21;
+    --gray-10: #2e2e31;
+    --gray-6: #7b7a7d;
+    --gray-4: #a5a5a6;
+    --gray-3: #bbbbbc;
+    --gray-2: #d1d0d2;
+    --gray-1: #e8e7e8;
+    --white: white;
+
+    /* feedback */
+    --color-success: #88c459;
+    --color-error: #f5414f;
+    --color-warning: #ffd137;
+
+
+    /* add semantic colors based on the variables above */
+    --color-text: var(--gray-10);
+    --color-text-heading: var(--color-primary);
+    --color-text-subtle: var(--gray-6);
+    --color-link: var(--color-primary);
+    --color-link-visited: var(--color-primary-dark);
+    --color-mark: var(--color-accent-bg);
+    --color-blockquote-border: var(--gray-2);
+    --color-code: var(--color-accent);
+
+
+    /*----------------------
+            TYPOGRAPHY
+    -----------------------*/
+
+    /* set base values */
+    --text-base-size: 1em;
+    --text-scale-ratio: 1.2;
+
+    /* type scale */
+    --text-xs: calc(1em / (var(--text-scale-ratio) * var(--text-scale-ratio)));
+    --text-sm: calc(1em / var(--text-scale-ratio));
+    --text-md: calc(1em * var(--text-scale-ratio));
+    --text-lg: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio));
+    --text-xl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
+    --text-xxl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
+    --text-xxxl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
+
+    /* line-height */
+    --heading-line-height: 1.2;
+    --body-line-height: 1.5;
+
+    /* Font Families. */
+
+    --font-primary: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+    --font-secondary: "Vollkorn", serif;
+    --font-monospace: "Roboto Mono", "Monaco", courier, monospace;
+
+
+    /*----------------------
+            SPACING
+    -----------------------*/
+
+    /* Spacing values */
+    --space-unit: 1em;
+    --space-xxxs: calc(0.25 * var(--space-unit));
+    --space-xxs: calc(0.375 * var(--space-unit));
+    --space-xs: calc(0.5 * var(--space-unit));
+    --space-sm: calc(0.75 * var(--space-unit));
+    --space-md: calc(1.25 * var(--space-unit));
+    --space-lg: calc(2 * var(--space-unit));
+    --space-xl: calc(3.25 * var(--space-unit));
+    --space-xxl: calc(5.25 * var(--space-unit));
+    --space-xxxl: calc(8.5 * var(--space-unit));
+
+    /* Paddings */
+
+    --component-padding: var(--space-sm);
+}
+
+body{
+    line-height: var(--body-line-height);
+    font-size: var(--text-base-size);
+    color: var(--color-text);
+}
+
+h1, .text--xxl {
+    font-size: var(--text-xxl);
+}
+
+h2, .text--xl {
+    font-size: var(--text-xl);
+}
+
+h3, .text--lg {
+    font-size: var(--text-lg);
+}
+
+h4, .text--md {
+    font-size: var(--text-md);
+}
+
+h1, h2, h3, h4 {
+    color: var(--color-text-heading);
+    margin-top: var(--space-md);
+    line-height: var(--heading-line-height);
+}
+
+
+b {
+    color: var(--color-primary);
+}
+
+
+p {
+    line-height: 1.6rem;
+    word-spacing: 0.05rem;
+    margin-top: var(--space-sm);
+}
+
+a {
+    color: var(--color-primary);
+}
+
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    font-family: var(--font-primary);
+}
+
+.nav-menu {
+    flex: 0 0 20em;
+    font-family: var(--font-primary);
+
+    border-right: 1px solid var(--border-color);
+    background-color: var(--color-code);
+}
+
+.navbar { 
+    padding: var(--component-padding);
+    overflow-y: auto;
+    height: 93vh;
+}
+
+.nav-menu > .navbar > header {
+    text-align: center;
+}
+
+.nav-item {
+    line-height: 2rem;
+    margin: 0;
+    padding-right: 5px;
+}
+
+.navbar > .nav-list > .nav-sub-list {
+    padding-left: var(--component-padding);
+    font-size: 0.875rem;
+}
+
+.nav-link, .sub-nav-link{
+    text-decoration: none;
+    color: var(--color-primary);
+}
+
+.nav-link:hover, .sub-nav-link:hover {
+    text-decoration: underline;
+}
+
+.navbar > .nav-list {
+    margin-top: var(--space-md);
+}
+
+.navbar > .nav-list > .nav-item {
+    color: var(--color-primary);
+    list-style-type: none;
+}
+
+
+.navbar > .nav-list > .nav-sub-list > .nav-sub-list {
+    padding-left: var(--component-padding);
+}
+
+.main-article {
+    padding: var(--component-padding); 
+}
+
+.main-doc {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+pre {
+    margin: 1.2em 0;
+    background-color: var(--color-code);
+    padding: 0 1.4rem;
+    font-size: 0.8rem;
+    font-family: var(--font-monospace);
+}
+
+code {
+    width: 100%;
+    height: 100%;
+    padding: 4px 4px;
+    font-size: 0.8rem;
+    background-color: var(--color-code);
+    font-family: var(--font-monospace);
+    white-space: pre-wrap;
+}
+
+pre code {
+    border: 0px;
+    padding: 2px;
+}
+
+blockquote {
+    margin: 1rem 0 1rem 0;
+    border-left: 5px solid var(--color-primary);
+    background-color: var(--color-code);
+    padding: 1px 0 1px 10px;
+}
+
+.content-list {
+    list-style-type: disc;
+}
+
+@media (max-width: 576px) {
+    .nav-menu {
+        display: none;
+    }
+
+    .nav-menu-closed {
+        display: block;
+    }
+}
+
+@media (min-width: 576px) {
+    .nav-menu {
+        display: block;
+    }
+
+    .nav-menu-closed {
+        display: none;
+    }
+}
+
+.hamburger-container {
+    display: inline-block;
+    align-self: flex-end;
+    position: absolute;
+    z-index: 2;
+
+    cursor: pointer;
+    margin: 1rem 1rem;
+}
+
+
+.nav-menu::after {
+    content: "";
+    position: absolute;
+    width: auto;
+    z-index: 1;
+    bottom: 0;
+    
+    min-width: calc(20em - var(--space-md));
+    pointer-events: none;
+    background-image: linear-gradient(to top, var(--color-code), rgba(241, 241, 242, 0.4) 50%);
+    height: 10vh;
+} 
+
+/* Hamburger Menu Button */
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: var(--color-primary);
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}

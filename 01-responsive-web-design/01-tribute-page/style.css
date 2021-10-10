@@ -1,0 +1,172 @@
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select,
+textarea {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+td:not([align]),
+th:not([align]) {
+  text-align: left;
+}
+
+/***************
+
+mini reset end
+
+***************/
+
+
+body {
+ font-family: 'Nunito Sans', sans-serif;
+}
+
+h1,h2 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+  font-size: 4em;
+  margin: 40px 0 30px 0;
+
+}
+
+h2 {
+  font-size: 2em;
+  margin: 40px 0 30px 0;
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.lifespan {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2em;
+}
+
+#image {
+
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+#img-div {
+  padding: 10px;
+  background-color: #E8F4FD;
+}
+
+#img-caption {
+  text-align: center;
+  margin: 1em;
+}
+
+#tribute-info {
+  max-width: 800px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ul{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media(max-width:600px){
+  ul{
+     grid-template-columns: 1fr;
+  }
+}
+
+a {
+  text-decoration: none;
+	border-bottom: 2px solid #829dce;
+  color: #829dce;
+}
+
+a:hover{
+  	border-bottom: 0px;
+    color: #829dce;
+}
+
+#footer {
+  margin: 40px 0 40px 0;
+  font-size: 1.5em;
+}
